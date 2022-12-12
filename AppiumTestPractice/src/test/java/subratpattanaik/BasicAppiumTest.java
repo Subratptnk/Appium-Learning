@@ -4,12 +4,17 @@ import java.io.File;
 import java.net.URL;
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -45,6 +50,14 @@ public class BasicAppiumTest {
 		
 //		service.start();
 	}
+	
+	
+	public void longPressAction(WebElement ele) {
+		((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",
+				ImmutableMap.of("elementId", ((RemoteWebElement) ele).getId(), "duration",2000
+			));
+	}
+	
 	@AfterClass
 	public void stopServer() {
 		driver.quit();
