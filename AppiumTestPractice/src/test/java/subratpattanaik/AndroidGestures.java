@@ -12,7 +12,6 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 
 public class AndroidGestures extends BasicAppiumTest {
-
 	@Test
 	public void longPress() throws InterruptedException {
 		
@@ -37,7 +36,12 @@ public class AndroidGestures extends BasicAppiumTest {
 		Thread.sleep(5000);
 
 	}
-	
-	
+
+	@Test
+	public void scroll() throws InterruptedException {
+		driver.findElement(AppiumBy.accessibilityId("Views")).click();
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"WebView\"));"));
+		Thread.sleep(5000);
+	}
 	
 }
