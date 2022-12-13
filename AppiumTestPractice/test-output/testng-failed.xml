@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="subratpattanaik.ScreenAutoTest">
+      <class name="subratpattanaik.AndroidSwipeGestures">
         <methods>
+          <include name="swipe"/>
           <include name="openAppium"/>
-          <include name="wifiSettingTest"/>
           <include name="stopServer"/>
         </methods>
-      </class> <!-- subratpattanaik.ScreenAutoTest -->
+      </class> <!-- subratpattanaik.AndroidSwipeGestures -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

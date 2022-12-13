@@ -51,6 +51,13 @@ public class BasicAppiumTest {
 //		service.start();
 	}
 	
+	public void swipeLeftAction(WebElement image) {
+		((JavascriptExecutor) driver).executeScript("mobile: swipeGesture",
+		ImmutableMap.of("elementId", ((RemoteWebElement) image).getId(),
+				"direction","left",
+				"percent",0.75
+				));
+	}
 	
 	public void longPressAction(WebElement ele) {
 		((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",
