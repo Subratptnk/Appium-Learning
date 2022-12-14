@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="subratpattanaik.AndroidSwipeGestures">
+      <class name="subratpattanaik.AndroidDragDropGestures">
         <methods>
-          <include name="swipe"/>
+          <include name="dragDropAction"/>
           <include name="openAppium"/>
           <include name="stopServer"/>
         </methods>
-      </class> <!-- subratpattanaik.AndroidSwipeGestures -->
+      </class> <!-- subratpattanaik.AndroidDragDropGestures -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
